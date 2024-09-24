@@ -14,7 +14,7 @@ export const ForgotPassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:4006/api/forgotpassword', { email });
+            const response = await axios.post('https://nodejs-4-be.onrender.com/api/forgotpassword', { email });
             const data = response.data;
             setMessage(data.message);
           navigate(`/reset/${randomstring}`);

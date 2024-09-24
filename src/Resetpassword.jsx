@@ -14,7 +14,7 @@ export const Resetpassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:4006/api/resetpassword', { randomstring, newPassword });
+            const response = await axios.post('https://nodejs-4-be.onrender.com/api/resetpassword', { randomstring, newPassword });
             const data = response.data;
             setMessage(data.message);
         } catch (error) {

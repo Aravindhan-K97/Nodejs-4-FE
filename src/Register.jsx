@@ -19,7 +19,7 @@ export const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:4006/api/register', formData)
+            const response = await axios.post('https://nodejs-4-be.onrender.com/api/register', formData)
             .then((res)=>setMessage(res.data.message))
             
             console.log(response.data);

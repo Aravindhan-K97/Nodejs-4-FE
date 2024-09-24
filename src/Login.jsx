@@ -17,7 +17,7 @@ export const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:4006/api/login', loginData);
+            const response = await axios.post('https://nodejs-4-be.onrender.com/api/login', loginData);
             setMessage(response.data.message);
             console.log(response.data);
         } catch (error) {
